@@ -1,0 +1,43 @@
+Hello, is it me you're looking for
+
+x = 5
+print(x)
+MyName = "Charlie"
+print(MyName)
+last_name = "Brown"
+print(last_name)
+age = 6
+print(x)
+
+print("{} {} is {} years old.".format(MyName,last_name,age))
+
+name = "Charlie"
+surname = "Brown"
+age = 55
+boro = "Manhattan"
+pet_type = "cat"
+pet_name = "Bozo"
+res_since = 2000
+pn1 = "He"
+pn2 = "his"
+
+def Bio(name,surname,age,boro,pet_type,pet_name,res_since, pn1, pn2):
+  sentence = "{} {} is {} years old and has lived in {} since {}. {} currently lives with {} {}, {}.".format(name, surname,age,boro,res_since,pn1,pn2,pet_type,pet_name)
+  return sentence
+
+
+s1 = Bio("James","Bond",66,"Queens","dog","Nico",1989, "He","his")
+
+s2 = Bio("Alice","Jones",88,"Brooklyn","cat", "Bambi",1977, "She","her")
+
+print(s1)
+print(s2)
+
+print(name)
+
+def Add_One(n):
+  x = n + 1
+  return x 
+
+exp1 = Add_One(10)
+print(exp1)

@@ -72,3 +72,109 @@ elif lunch == "Y" and hungry == "N":
 
 else:
   print("We have to wait until 12pm.")
+
+  mylist = [33,444,2314,214214,2313,214,"Charlie","Brown",True, False]
+another_list = ["John","Paul","Ringo","George"]
+print(another_list)
+#LISTS HAVE ORDER. STARTING WITH 0
+print(another_list[0:2]) #includes left excludes right
+#0 and 1 BUT NOT element 2 
+print(another_list[0:-1]) #starts with 0 and does NOT include the last element 
+print(another_list[1:-1])
+list2 = ["Mick","Charlie","Keith"]
+print(another_list + list2)
+big_list = another_list + list2
+print(big_list)
+
+names = ['Brandon Davis',
+ 'Nicholas Rogers',
+ 'Adam Thompson',
+ 'Marcus Scott',
+ 'Lucas Miller',
+ 'Deanna Moore',
+ 'Gary Stone',
+ 'Jennifer Ward',
+ 'Pamela Davis',
+ 'James Martinez']
+ 
+print(len(names))
+
+addresses = ['439 Stone Alley Apt. 132\nWest Margaretfurt, KY 03083', '868 Jones Inlet Suite 949\nLisaport, LA 56856', '96194 John Pines\nNew Coryberg, ME 05770', '993 Williams Spurs\nWaltershaven, VT 50097', '15940 Schaefer Green Apt. 243\nLake Kevin, NC 35062', '9683 Emily Fords\nSoniaside, WV 43019', '5292 Kathleen Course Apt. 292\nSouth Shawn, IL 08323', '5359 Nicholas Light\nPort Diane, NM 34537', '6464 Mills Drives Apt. 104\nPort Bridgetfurt, MS 03647', '60827 Michael Station\nVirginiamouth, NY 81801']
+
+nums = [21, 98, 16,  9, 34]
+nums2 = []
+for n in nums:
+  x = n + 1
+  nums2.append(x)
+print(nums2)
+nums3 = [n - 1 for n in nums] #list comprehension
+print(nums3)
+
+allcaps =[] 
+for name in names:
+  c = name.upper()
+  allcaps.append(c)
+print(allcaps)
+
+lower_case_names = [name.lower() for name in names]
+print(lower_case_names)
+evens = [] 
+odds = [] 
+for n in nums:
+  if n % 2 == 0:
+    evens.append(n)
+  else:
+    odds.append(n)
+print(evens)
+print(odds)  
+
+evens = [n for n in nums if n % 2 == 0]
+odds = [n for n in nums if n % 2 != 0]
+print(evens)
+print(odds)
+
+#james.bell@gmail.com
+
+emails = ["{}.{}@gmail.com".format(n[0],n[1]) for n in split_names]
+
+emails = [em.lower() for em in emails]
+print(emails)
+
+pns = ['(173)075-8198x293',
+ '595.464.1985x2948',
+ '3668792454',
+ '288.160.7565x82812',
+ '(325)451-1203',
+ '6444524171',
+ '001-031-101-0668x1427',
+ '(594)666-4539',
+ '776-945-3840x62719',
+ '(120)581-6098x6182']
+
+pns_split = [n.split("x") for n in pns]
+print(pns_split)
+pns_no_ext = [n[0] for n in pns_split]
+print(pns_no_ext)
+
+import random 
+s = 0 
+
+while s < 21:
+  want = input("Do you want another card Y/N....")
+  if want == "Y":
+    deal = random.randint(1,10)
+    s = s + deal 
+    if s == 21: 
+      print("You win! You got blackjack!")
+    else:
+      print("Your current score is {}.".format(s))
+    
+  else:
+    print("Your final score is {}.".format(s))
+    break
+
+favs = [] 
+while len(favs) < 5:
+  f = input("What is one of your favorite things?...")
+  favs.append(f)
+print(favs)
